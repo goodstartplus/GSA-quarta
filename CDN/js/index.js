@@ -32,7 +32,7 @@ document.getElementById("display_name").value =
 
   document.getElementById("meeting_number").value = "87149115915"
   ;
-  document.getElementById("meeting_pwd").value = "418864"
+  document.getElementById("meeting_pwd").value = "0fGYcM"
   ;
 
   if (testTool.getCookie("meeting_lang"))
