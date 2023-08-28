@@ -31,7 +31,7 @@ new WebpackDevServer(
     historyApiFallback: true,
     proxy: [
       {
-        path: 'https://goodstartplus.github.io/GSA-quarta/CDN/meeting.html',
+        path: '/meeting.html',
         target: 'http://127.0.0.1:9998/'
       }
     ],
