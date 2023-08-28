@@ -113,7 +113,7 @@ document.getElementById("display_name").value =
           meetingConfig.sdkKey = CLIENT_ID;
           var joinUrl = "https://goodstartplus.github.io/GSA-quarta/CDN/meeting.html?" + testTool.serialize(meetingConfig);
           console.log(joinUrl);
-          window.open(joinUrl, "_top");
+          window.open(joinUrl, "framename");
         },
       });
     });
