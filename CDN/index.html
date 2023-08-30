@@ -15,6 +15,75 @@
 
 <body>
    <style>
+/* Popup container "Entrando pelo celular?" */
+@media (min-width: 768px) {
+.popup {
+  visibility: hidden!important;  
+}
+}
+     .popup {
+       padding-top: 30px;
+       color: red;
+     }
+     .popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+  margin-bottom: -30px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+/*FIM*/
+	   
+	   
   #clear_all {display:none;}
 #copy_join_link {display:none;}
 #meeting_email {display:none;}
@@ -183,7 +252,9 @@ border-radius: 10px;
                     <button type="button" link="" onclick="window.copyJoinLink('#copy_join_link')"
                         class="btn btn-primary" id="copy_join_link">Copy Direct join link</button>
                   
-                  
+                     <div class="popup" onclick="myFunction()">Entrando pelo celular?
+  <span class="popuptext" id="myPopup">Você precisa abilitar a camera e microfone. <a href="https://tally.so#tally-open=n0BkB0&tally-layout=modal&tally-emoji-text=📱&tally-emoji-animation=wave" target="_blank">Clique aqui.</a></span>
+</div>
 
                 </form>
              
@@ -193,6 +264,15 @@ border-radius: 10px;
         </div>
     </nav>
 
+	<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+	
     <script src="https://source.zoom.us/2.15.2/lib/vendor/react.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/react-dom.min.js"></script>
     <script src="https://source.zoom.us/2.15.2/lib/vendor/redux.min.js"></script>
