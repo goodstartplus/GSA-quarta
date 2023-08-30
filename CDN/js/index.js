@@ -94,7 +94,7 @@ document.getElementById("display_name").value =
       e.preventDefault();
       var meetingConfig = testTool.getMeetingConfig();
       if (!meetingConfig.mn || !meetingConfig.name) {
-        alert("Por favor, escreva o seu nome");
+        alert("Escreva o seu nome");
         return false;
       }
 
